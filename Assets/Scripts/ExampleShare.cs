@@ -22,7 +22,7 @@ public class ExampleShare : MonoBehaviour {
 		#endif
 		
 		#if UNITY_ANDROID
-			FrispAndroidSocial.instance().ShareImage("Testing", tex);
+			FrispAndroidSocial.instance().ShareImage("Title", "Testing", tex);
 		#endif
 		
 		Destroy(tex);
