@@ -43,3 +43,6 @@ public class ExampleShare : MonoBehaviour {
 	}
 }
 ```
+### Troubleshooting
+#### Android:
+* INSTALL_FAILED_CONTAINER_ERROR: This comes up all the time for me. What you need to do is unistall the application on the android phone if it is already installed and then erase the SD card on the emulator. You can do this by going to Settings->Storage->Erase SD card
