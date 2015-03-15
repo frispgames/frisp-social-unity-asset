@@ -7,7 +7,7 @@ I have set the repository up as a unity project. When adding features you will n
 
 If you would like to make any changes or update the android layer of the asset you can do so by changing the contents of the frisp-social android lbrary. You will then need to replace ```frisp-social.jar``` inside of this repo with the one generated from working on frisp-social android lbrary.
 
-### Setting up for your own project
+### Installing into your own project
 
 * Download the [asset](https://github.com/frispgames/frisp-social-unity-asset/blob/master/package/frisp-social.unitypackage) and import it into your unity project.
 * Create a class that takes a screenshot of the game and then use the API provided with the asset to share it. See the below class as an example:
