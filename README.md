@@ -43,6 +43,12 @@ public class ExampleShare : MonoBehaviour {
 	}
 }
 ```
+* Add the following to Plugins/Android/AndroidManifest.xml inside your project:
+If you don't already have an AndroidManifest.xml use this [one](https://github.com/frispgames/android-social-library/blob/master/AndroidManifest.xml)
+```XML
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
+```
 ### Troubleshooting
 #### Android:
 * INSTALL_FAILED_CONTAINER_ERROR: This comes up all the time for me. What you need to do is unistall the application on the android phone if it is already installed and then erase the SD card on the emulator. You can do this by going to Settings->Storage->Erase SD card
