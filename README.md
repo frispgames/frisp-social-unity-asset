@@ -5,7 +5,7 @@ Unity asset for native sharing a screenshot on Android and iPhone.
 
 I have set the repository up as a unity project. When adding features you will need to open the contents of the repository in unity. For any new features add a new UI Button and connect the feature up to that button and name it accordingly.
 
-If you would like to make any changes or update the android layer of the asset you can do so by changing the contents of the frisp-social android library. You will then need to replace ```frisp-social.jar``` inside of this repo with the one generated from working on [android-social-lbrary](https://github.com/frispgames/android-social-library).
+If you would like to make any changes or update the android layer of the asset you can do so by changing the contents of the frisp-social android library. You will then need to replace ```frisp-social.jar``` inside of this repo with the one generated from working on [android-social-library](https://github.com/frispgames/android-social-library).
 
 ### Installing into your own project
 
