@@ -44,7 +44,6 @@ public class ExampleShare : MonoBehaviour {
 }
 ```
 * Add the following to Plugins/Android/AndroidManifest.xml inside your project:
-If you don't already have an AndroidManifest.xml use this [one](https://github.com/frispgames/android-social-library/blob/master/AndroidManifest.xml)
 ```XML
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
 	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
