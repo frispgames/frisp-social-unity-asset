@@ -53,7 +53,7 @@ on the following line:
 ```
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.frispgames.frispsocialunityasset" android:versionName="1.0" android:versionCode="1" android:installLocation="preferExternal">
 ```
-* Permission issues: Make sure the following line is in your AndroidManifest.xml this should be under ```Plugins/Android``` if not you can find one under ```Temp/StagingArea``` after building for android. Add this into your ```Plugins/Android``` and add the below line:
+* Permission issues: Make sure the following line is in your AndroidManifest.xml this should be under ```Plugins/Android``` folder. If not you can find one under the ```Temp/StagingArea``` directory after building for android. Add this into your ```Plugins/Android``` directory and add the below line:
 ```
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 ```
