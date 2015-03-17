@@ -9,9 +9,17 @@ public class FrispAppleSocial : MonoBehaviour  {
   [DllImport ("__Internal")]
   private static extern void _Share (string text, string image);
 
+  private static readonly FrispAppleSocial _singleton = new FrispAppleSocial ();
+
+  private FrispAppleSocial() {}
+
+  public static FrispAppleSocial Instance() {
+	return _singleton;
+  }
+
   public static void ShareImage(String text, Texture2D image) {
-    byte[] imageInBytes = image.EncodeToPNG();
-    string base64Image = System.Convert.ToBase64String (imageInBytes);
+    var imageInBytes = image.EncodeToPNG();
+    var base64Image = System.Convert.ToBase64String (imageInBytes);
     _Share(text, base64Image);
   }
 }

@@ -18,11 +18,11 @@ public class ExampleShare : MonoBehaviour {
 		tex.Apply();
 		
 		#if UNITY_IPHONE && !UNITY_EDITOR
-			FrispAppleSocial.ShareImage("Testing", tex);
+			FrispAppleSocial.Instance().ShareImage("Testing", tex);
 		#endif
 		
 		#if UNITY_ANDROID
-			FrispAndroidSocial.instance().ShareImage("Title", "Testing", tex);
+			FrispAndroidSocial.Instance().ShareImage("Title", "Testing", tex);
 		#endif
 		
 		Destroy(tex);
