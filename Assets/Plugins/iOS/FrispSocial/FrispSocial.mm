@@ -2,14 +2,9 @@
 
 @implementation FrispSocial
 
-static FrispSocial * _instance;
+ static FrispSocial * _instance = [[FrispSocial alloc] init];
 
 + (id) instance {
-    
-    if (_instance == nil)  {
-        _instance = [[FrispSocial alloc] init];
-    }
-    
     return _instance;
 }
 
