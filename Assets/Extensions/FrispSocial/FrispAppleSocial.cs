@@ -17,7 +17,7 @@ public class FrispAppleSocial : MonoBehaviour  {
 	return _singleton;
   }
 
-  public static void ShareImage(String text, Texture2D image) {
+  public void ShareImage(String text, Texture2D image) {
     var imageInBytes = image.EncodeToPNG();
     var base64Image = System.Convert.ToBase64String (imageInBytes);
     _Share(text, base64Image);

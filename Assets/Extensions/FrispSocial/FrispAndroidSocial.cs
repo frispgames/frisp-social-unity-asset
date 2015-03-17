@@ -2,7 +2,7 @@ using UnityEngine;
 using System;
 using System.Collections;
 
-#if UNITY_ANDROID
+#if UNITY_ANDROID && !UNITY_EDITOR
 public class FrispAndroidSocial {
 	private static readonly FrispAndroidSocial _singleton = new FrispAndroidSocial ();
 

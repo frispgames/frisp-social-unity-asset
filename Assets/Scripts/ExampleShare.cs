@@ -21,7 +21,7 @@ public class ExampleShare : MonoBehaviour {
 			FrispAppleSocial.Instance().ShareImage("Testing", tex);
 		#endif
 		
-		#if UNITY_ANDROID
+		#if UNITY_ANDROID && !UNITY_EDITOR
 			FrispAndroidSocial.Instance().ShareImage("Title", "Testing", tex);
 		#endif
 		
