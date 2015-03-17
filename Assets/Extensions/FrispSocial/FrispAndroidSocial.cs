@@ -1,24 +1,28 @@
 using UnityEngine;
 using System;
 using System.Collections;
-#if UNITY_ANDROID
 
+#if UNITY_ANDROID && !UNITY_EDITOR
 public class FrispAndroidSocial {
-	static FrispAndroidSocial singleton = null;
+	private static readonly FrispAndroidSocial _singleton = new FrispAndroidSocial ();
 
-	public static FrispAndroidSocial instance() {
-		if (singleton == null) {
-			singleton = new FrispAndroidSocial();
-		}
-		return singleton;
+	private FrispAndroidSocial() {}
+
+	public static FrispAndroidSocial Instance() {
+		return _singleton;
 	}
 
 	public void ShareImage(String title, String text, Texture2D image) {
-		byte[] imageInBytes = image.EncodeToPNG();
-		string base64Image = System.Convert.ToBase64String (imageInBytes);
+		var imageInBytes = image.EncodeToPNG();
+		var base64Image = System.Convert.ToBase64String (imageInBytes);
+		var socialClass = new AndroidJavaClass (
+			"com.frispgames.frispsocial.FrispSocial"
+		);
 
-		using (AndroidJavaClass socialClass = new AndroidJavaClass ("com.frispgames.frispsocial.FrispSocial")) {
-			socialClass.CallStatic ("shareImage", new String[]{title, text, base64Image});
+		using (socialClass) {
+			socialClass.CallStatic (
+				"shareImage", new String[]{title, text, base64Image}
+			);
 		}
 	}
 }
