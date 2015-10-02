@@ -1,13 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class FrispShare : MonoBehaviour {
+public class FrispSocial : MonoBehaviour {
+
+	private static readonly FrispSocial _singleton = new FrispSocial ();
+
+	private FrispSocial() {}
 	
-	public void shareScreenShot() {
-		StartCoroutine (PostScreenshot());
+	public static FrispSocial Instance() {
+		return _singleton;
 	}
 	
-	private IEnumerator PostScreenshot() {    
+	public IEnumerator PostScreenshot(string title, string message) {    
 		yield return new WaitForEndOfFrame();
 		// Create a texture the size of the screen, RGB24 format
 		int width = Screen.width;
@@ -18,11 +22,11 @@ public class FrispShare : MonoBehaviour {
 		tex.Apply();
 		
 		#if UNITY_IPHONE && !UNITY_EDITOR
-			FrispAppleSocial.Instance().ShareImage(FrispShareConstants.MESSAGE, tex);
+		FrispAppleSocial.Instance().ShareImage(message, tex);
 		#endif
 		
 		#if UNITY_ANDROID && !UNITY_EDITOR
-			FrispAndroidSocial.Instance().ShareImage(FrispShareConstants.TITLE, FrispShareConstants.MESSAGE, tex);
+		FrispAndroidSocial.Instance().ShareImage(title, message, tex);
 		#endif
 		
 		Destroy(tex);
