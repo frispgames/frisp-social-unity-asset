@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ExampleShare : MonoBehaviour {
+public class FrispShare : MonoBehaviour {
 	
 	public void shareScreenShot() {
 		StartCoroutine (PostScreenshot());
@@ -14,15 +14,15 @@ public class ExampleShare : MonoBehaviour {
 		int height = Screen.height;
 		Texture2D tex = new Texture2D( width, height, TextureFormat.RGB24, false );
 		// Read screen contents into the texture
-		tex.ReadPixels( new Rect(0, 0, width, height), 0, 0 );
+		tex.ReadPixels(new Rect(0, 0, width, height), 0, 0 );
 		tex.Apply();
 		
 		#if UNITY_IPHONE && !UNITY_EDITOR
-			FrispAppleSocial.Instance().ShareImage("Testing", tex);
+			FrispAppleSocial.Instance().ShareImage(FrispShareConstants.MESSAGE, tex);
 		#endif
 		
 		#if UNITY_ANDROID && !UNITY_EDITOR
-			FrispAndroidSocial.Instance().ShareImage("Title", "Testing", tex);
+			FrispAndroidSocial.Instance().ShareImage(FrispShareConstants.TITLE, FrispShareConstants.MESSAGE, tex);
 		#endif
 		
 		Destroy(tex);

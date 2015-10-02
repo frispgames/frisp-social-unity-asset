@@ -10,39 +10,9 @@ If you would like to make any changes or update the android layer of the asset y
 ### Installing into your own project
 
 * Download the [asset](https://github.com/frispgames/frisp-social-unity-asset/blob/master/package/frisp-social.unitypackage) and import it into your unity project.
-* Create a class that takes a screenshot of the game and then use the API provided with the asset to share it. See the below class as an example:
-```CSharp
-using UnityEngine;
-using System.Collections;
+* Update the ``Scripts/FrispSocial/FrispSocialConstants.cs`` file to contain the message and title you wish to use.
+* Connect the functions that are in the ``Scripts/FrispSocial/FrispSocial.cs`` class with actions in your game.
 
-public class ExampleShare : MonoBehaviour {
-	
-	public void shareScreenShot() {
-		StartCoroutine (PostScreenshot());
-	}
-	
-	private IEnumerator PostScreenshot() {    
-		yield return new WaitForEndOfFrame();
-		// Create a texture the size of the screen, RGB24 format
-		int width = Screen.width;
-		int height = Screen.height;
-		Texture2D tex = new Texture2D( width, height, TextureFormat.RGB24, false );
-		// Read screen contents into the texture
-		tex.ReadPixels( new Rect(0, 0, width, height), 0, 0 );
-		tex.Apply();
-		
-		#if UNITY_IPHONE && !UNITY_EDITOR
-			FrispAppleSocial.ShareImage("Testing", tex);
-		#endif
-		
-		#if UNITY_ANDROID
-			FrispAndroidSocial.instance().ShareImage("Title", "Testing", tex);
-		#endif
-		
-		Destroy(tex);
-	}
-}
-```
 ### Troubleshooting
 #### Android:
 * INSTALL_FAILED_CONTAINER_ERROR: When exporting the project to Android Studio change:
