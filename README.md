@@ -10,8 +10,21 @@ If you would like to make any changes or update the android layer of the asset y
 ### Installing into your own project
 
 * Download the [asset](https://github.com/frispgames/frisp-social-unity-asset/blob/master/package/frisp-social.unitypackage) and import it into your unity project.
-* Update the ``Scripts/FrispSocial/FrispSocialConstants.cs`` file to contain the message and title you wish to use.
-* Connect the functions that are in the ``Scripts/FrispSocial/FrispSocial.cs`` class with actions in your game.
+* Create a class that takes a screenshot of the game and then use the API provided with the asset to share it. See the below class as an example:
+```CSharp
+using UnityEngine;
+using System.Collections;
+
+public class Share : MonoBehaviour {
+  private const string TITLE   = "Title";
+  private const string MESSAGE = "Message";
+
+  public void shareScreenShot() {
+    StartCoroutine (FrispSocial.Instance().PostScreenshot(TITLE, MESSAGE));
+  }
+}
+
+```
 
 ### Troubleshooting
 #### Android:
