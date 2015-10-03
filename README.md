@@ -1,5 +1,5 @@
 # Frisp Social Unity Asset
-Unity asset for native sharing a screenshot on Android and iPhone.
+Unity asset that provides the ability to share the current screen on various social media platforms that your device supports natively.
 
 ### Development
 
