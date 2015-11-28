@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace FrispSocial {
+namespace FrispGames.Social {
 
 	public class ScreenshotSharer : MonoBehaviour {
 

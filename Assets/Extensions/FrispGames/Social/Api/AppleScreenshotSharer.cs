@@ -3,7 +3,7 @@ using System;
 using System.Collections;
 using System.Runtime.InteropServices;
 
-namespace FrispSocial.Api {
+namespace FrispGames.Social.Api {
 	public class AppleScreenshotSharer : MonoBehaviour  {
 		[DllImport ("__Internal")]
 		private static extern void _Share (string text, string image);

@@ -6,6 +6,6 @@ public class Share : MonoBehaviour {
 	private const string MESSAGE = "Message";
 
 	public void shareScreenShot() {
-		StartCoroutine (FrispSocial.ScreenshotSharer.Instance().PostScreenshot(TITLE, MESSAGE));
+		StartCoroutine (FrispGames.Social.ScreenshotSharer.Instance().PostScreenshot(TITLE, MESSAGE));
 	}
 }

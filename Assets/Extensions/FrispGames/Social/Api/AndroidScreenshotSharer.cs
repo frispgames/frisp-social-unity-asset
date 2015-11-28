@@ -2,7 +2,7 @@ using UnityEngine;
 using System;
 using System.Collections;
 
-namespace FrispSocial.Api {
+namespace FrispGames.Social.Api {
 	public class AndroidScreenshotSharer : MonoBehaviour {
 		private static readonly AndroidScreenshotSharer _singleton = new AndroidScreenshotSharer ();
 
