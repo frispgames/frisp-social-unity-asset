@@ -8,12 +8,12 @@ namespace FrispGames.Social {
 		private static readonly ScreenshotSharer _singleton = new ScreenshotSharer ();
 
 		private ScreenshotSharer() {}
-		
+
 		public static ScreenshotSharer Instance() {
 			return _singleton;
 		}
-		
-		public IEnumerator PostScreenshot(string title, string message) {    
+
+		public IEnumerator PostScreenshot(string title, string message) {
 			yield return new WaitForEndOfFrame();
 			// Create a texture the size of the screen, RGB24 format
 			int width = Screen.width;
