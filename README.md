@@ -1,6 +1,12 @@
 # Frisp Social Unity Asset
 Unity asset that provides the ability to share the current screen on various social media platforms that your device supports natively.
 
+### Games using this asset
+#### Bouncy Bones
+A spooky circus themed 2D side-scroller which will have you challenged and itching to play more.
+[Google Play Store](https://play.google.com/store/apps/details?id=com.frispgames.bouncybones)
+[App Store](https://itunes.apple.com/us/app/bouncy-bones/id973423990)
+
 ### Development
 
 I have set the repository up as a unity project. When adding features you will need to open the contents of the repository in unity. For any new features add a new UI Button and connect the feature up to that button and name it accordingly.
