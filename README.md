@@ -3,9 +3,10 @@ Unity asset that provides the ability to share the current screen on various soc
 
 ### Games using this asset
 #### Bouncy Bones
-A spooky circus themed 2D side-scroller which will have you challenged and itching to play more.
-[Google Play Store](https://play.google.com/store/apps/details?id=com.frispgames.bouncybones)
-[App Store](https://itunes.apple.com/us/app/bouncy-bones/id973423990)
+A spooky circus themed 2D side-scroller which will have you challenged and itching to play more.  
+Available on:  
+* [Google Play Store](https://play.google.com/store/apps/details?id=com.frispgames.bouncybones)  
+* [App Store](https://itunes.apple.com/us/app/bouncy-bones/id973423990)  
 
 ### Development
 
